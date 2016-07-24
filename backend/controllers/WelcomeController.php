@@ -14,15 +14,10 @@ use common\base\YiiForum;
  */
 class WelcomeController extends BaseController
 {
-    public function actionHome()
-    {
-        $this->layout = false;
-        return $this->render('home');
-    }
 
     public function actionIndex()
     {
-        $this->layout = false;
+        //$this->layout = false;
         return $this->render('index');
     }
 

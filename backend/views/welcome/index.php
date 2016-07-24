@@ -1,1109 +1,1436 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta charset="utf-8" />
-		<title>Form Elements - Ace Admin</title>
 
-		<meta name="description" content="Common form elements and layouts" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<!-- /section:settings.box -->
+<div class="page-header">
+	<h1>
+		Dashboard
+		<small>
+			<i class="ace-icon fa fa-angle-double-right"></i>
+			overview &amp; stats
+		</small>
+	</h1>
+</div><!-- /.page-header -->
 
-		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="/static/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="/static/css/font-awesome.min.css" />
+<div class="row">
+	<div class="col-xs-12">
+		<!-- PAGE CONTENT BEGINS -->
+		<div class="alert alert-block alert-success">
+			<button type="button" class="close" data-dismiss="alert">
+				<i class="ace-icon fa fa-times"></i>
+			</button>
 
-		<!-- page specific plugin styles -->
-		<link rel="stylesheet" href="/static/css/jquery-ui.custom.min.css" />
-		<link rel="stylesheet" href="/static/css/chosen.css" />
-		<link rel="stylesheet" href="/static/css/datepicker.css" />
-		<link rel="stylesheet" href="/static/css/bootstrap-timepicker.css" />
-		<link rel="stylesheet" href="/static/css/daterangepicker.css" />
-		<link rel="stylesheet" href="/static/css/bootstrap-datetimepicker.css" />
-		<link rel="stylesheet" href="/static/css/colorpicker.css" />
+			<i class="ace-icon fa fa-check green"></i>
 
-		<!-- text fonts -->
-		<link rel="stylesheet" href="/static/css/ace-fonts.css" />
+			Welcome to
+			<strong class="green">
+				Ace
+				<small>(v1.3)</small>
+			</strong>,the lightweight, feature-rich and easy to use admin template.
+		</div>
 
-		<!-- ace styles -->
-		<link rel="stylesheet" href="/static/css/ace.min.css" />
+		<div class="row">
+			<div class="space-6"></div>
 
-		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="/static/css/ace-part2.min.css" />
-		<![endif]-->
-		<link rel="stylesheet" href="/static/css/ace-skins.min.css" />
-		<link rel="stylesheet" href="/static/css/ace-rtl.min.css" />
+			<div class="col-sm-7 infobox-container">
+				<!-- #section:pages/dashboard.infobox -->
+				<div class="infobox infobox-green">
+					<div class="infobox-icon">
+						<i class="ace-icon fa fa-comments"></i>
+					</div>
 
-		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="/static/css/ace-ie.min.css" />
-		<![endif]-->
+					<div class="infobox-data">
+						<span class="infobox-data-number">32</span>
+						<div class="infobox-content">comments + 2 reviews</div>
+					</div>
 
-		<!-- inline styles related to this page -->
+					<!-- #section:pages/dashboard.infobox.stat -->
+					<div class="stat stat-success">8%</div>
 
-		<!-- ace settings handler -->
-		<script src="/static/js/ace-extra.min.js"></script>
+					<!-- /section:pages/dashboard.infobox.stat -->
+				</div>
 
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+				<div class="infobox infobox-blue">
+					<div class="infobox-icon">
+						<i class="ace-icon fa fa-twitter"></i>
+					</div>
 
-		<!--[if lte IE 8]>
-		<script src="/static/js/html5shiv.js"></script>
-		<script src="/static/js/respond.min.js"></script>
-		<![endif]-->
-	</head>
+					<div class="infobox-data">
+						<span class="infobox-data-number">11</span>
+						<div class="infobox-content">new followers</div>
+					</div>
 
-	<body class="no-skin">
+					<div class="badge badge-success">
+						+32%
+						<i class="ace-icon fa fa-arrow-up"></i>
+					</div>
+				</div>
 
-		<!-- /section:basics/navbar.layout -->
-		<div class="main-container" id="main-container" style=" margin-top:0px;">
-			<!-- /section:basics/sidebar -->
-			<div class="main-content" style="margin-left:0px;">
+				<div class="infobox infobox-pink">
+					<div class="infobox-icon">
+						<i class="ace-icon fa fa-shopping-cart"></i>
+					</div>
 
-				<!-- /section:basics/content.breadcrumbs -->
-				<div class="page-content">
+					<div class="infobox-data">
+						<span class="infobox-data-number">8</span>
+						<div class="infobox-content">new orders</div>
+					</div>
+					<div class="stat stat-important">4%</div>
+				</div>
 
-					<!-- /section:settings.box -->
-					<div class="page-header">
-						<h1>
-							Form Elements
-							<small>
-								<i class="ace-icon fa fa-angle-double-right"></i>
-								Common form elements and layouts
-							</small>
-						</h1>
-					</div><!-- /.page-header -->
+				<div class="infobox infobox-red">
+					<div class="infobox-icon">
+						<i class="ace-icon fa fa-flask"></i>
+					</div>
 
-					<div class="row">
-						<div class="col-xs-12">
-							<!-- PAGE CONTENT BEGINS -->
-							<form class="form-horizontal" role="form">
-								<!-- #section:elements.form -->
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Text Field </label>
+					<div class="infobox-data">
+						<span class="infobox-data-number">7</span>
+						<div class="infobox-content">experiments</div>
+					</div>
+				</div>
 
-									<div class="col-sm-9">
-										<input type="text" id="form-field-1" placeholder="Username" class="col-xs-10 col-sm-5" />
+				<div class="infobox infobox-orange2">
+					<!-- #section:pages/dashboard.infobox.sparkline -->
+					<div class="infobox-chart">
+						<span class="sparkline" data-values="196,128,202,177,154,94,100,170,224"></span>
+					</div>
+
+					<!-- /section:pages/dashboard.infobox.sparkline -->
+					<div class="infobox-data">
+						<span class="infobox-data-number">6,251</span>
+						<div class="infobox-content">pageviews</div>
+					</div>
+
+					<div class="badge badge-success">
+						7.2%
+						<i class="ace-icon fa fa-arrow-up"></i>
+					</div>
+				</div>
+
+				<div class="infobox infobox-blue2">
+					<div class="infobox-progress">
+						<!-- #section:pages/dashboard.infobox.easypiechart -->
+						<div class="easy-pie-chart percentage" data-percent="42" data-size="46">
+							<span class="percent">42</span>%
+						</div>
+
+						<!-- /section:pages/dashboard.infobox.easypiechart -->
+					</div>
+
+					<div class="infobox-data">
+						<span class="infobox-text">traffic used</span>
+
+						<div class="infobox-content">
+							<span class="bigger-110">~</span>
+							58GB remaining
+						</div>
+					</div>
+				</div>
+
+				<!-- /section:pages/dashboard.infobox -->
+				<div class="space-6"></div>
+
+				<!-- #section:pages/dashboard.infobox.dark -->
+				<div class="infobox infobox-green infobox-small infobox-dark">
+					<div class="infobox-progress">
+						<!-- #section:pages/dashboard.infobox.easypiechart -->
+						<div class="easy-pie-chart percentage" data-percent="61" data-size="39">
+							<span class="percent">61</span>%
+						</div>
+
+						<!-- /section:pages/dashboard.infobox.easypiechart -->
+					</div>
+
+					<div class="infobox-data">
+						<div class="infobox-content">Task</div>
+						<div class="infobox-content">Completion</div>
+					</div>
+				</div>
+
+				<div class="infobox infobox-blue infobox-small infobox-dark">
+					<!-- #section:pages/dashboard.infobox.sparkline -->
+					<div class="infobox-chart">
+						<span class="sparkline" data-values="3,4,2,3,4,4,2,2"></span>
+					</div>
+
+					<!-- /section:pages/dashboard.infobox.sparkline -->
+					<div class="infobox-data">
+						<div class="infobox-content">Earnings</div>
+						<div class="infobox-content">$32,000</div>
+					</div>
+				</div>
+
+				<div class="infobox infobox-grey infobox-small infobox-dark">
+					<div class="infobox-icon">
+						<i class="ace-icon fa fa-download"></i>
+					</div>
+
+					<div class="infobox-data">
+						<div class="infobox-content">Downloads</div>
+						<div class="infobox-content">1,205</div>
+					</div>
+				</div>
+
+				<!-- /section:pages/dashboard.infobox.dark -->
+			</div>
+
+			<div class="vspace-12-sm"></div>
+
+			<div class="col-sm-5">
+				<div class="widget-box">
+					<div class="widget-header widget-header-flat widget-header-small">
+						<h5 class="widget-title">
+							<i class="ace-icon fa fa-signal"></i>
+							Traffic Sources
+						</h5>
+
+						<div class="widget-toolbar no-border">
+							<div class="inline dropdown-hover">
+								<button class="btn btn-minier btn-primary">
+									This Week
+									<i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
+								</button>
+
+								<ul class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
+									<li class="active">
+										<a href="#" class="blue">
+											<i class="ace-icon fa fa-caret-right bigger-110">&nbsp;</i>
+											This Week
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+											Last Week
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+											This Month
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
+											Last Month
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="widget-body">
+						<div class="widget-main">
+							<!-- #section:plugins/charts.flotchart -->
+							<div id="piechart-placeholder"></div>
+
+							<!-- /section:plugins/charts.flotchart -->
+							<div class="hr hr8 hr-double"></div>
+
+							<div class="clearfix">
+								<!-- #section:custom/extra.grid -->
+								<div class="grid3">
+									<span class="grey">
+										<i class="ace-icon fa fa-facebook-square fa-2x blue"></i>
+										&nbsp; likes
+									</span>
+									<h4 class="bigger pull-right">1,255</h4>
+								</div>
+
+								<div class="grid3">
+									<span class="grey">
+										<i class="ace-icon fa fa-twitter-square fa-2x purple"></i>
+										&nbsp; tweets
+									</span>
+									<h4 class="bigger pull-right">941</h4>
+								</div>
+
+								<div class="grid3">
+									<span class="grey">
+										<i class="ace-icon fa fa-pinterest-square fa-2x red"></i>
+										&nbsp; pins
+									</span>
+									<h4 class="bigger pull-right">1,050</h4>
+								</div>
+
+								<!-- /section:custom/extra.grid -->
+							</div>
+						</div><!-- /.widget-main -->
+					</div><!-- /.widget-body -->
+				</div><!-- /.widget-box -->
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+
+		<!-- #section:custom/extra.hr -->
+		<div class="hr hr32 hr-dotted"></div>
+
+		<!-- /section:custom/extra.hr -->
+		<div class="row">
+			<div class="col-sm-5">
+				<div class="widget-box transparent">
+					<div class="widget-header widget-header-flat">
+						<h4 class="widget-title lighter">
+							<i class="ace-icon fa fa-star orange"></i>
+							Popular Domains
+						</h4>
+
+						<div class="widget-toolbar">
+							<a href="#" data-action="collapse">
+								<i class="ace-icon fa fa-chevron-up"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="widget-body">
+						<div class="widget-main no-padding">
+							<table class="table table-bordered table-striped">
+								<thead class="thin-border-bottom">
+									<tr>
+										<th>
+											<i class="ace-icon fa fa-caret-right blue"></i>name
+										</th>
+
+										<th>
+											<i class="ace-icon fa fa-caret-right blue"></i>price
+										</th>
+
+										<th class="hidden-480">
+											<i class="ace-icon fa fa-caret-right blue"></i>status
+										</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>internet.com</td>
+
+										<td>
+											<small>
+												<s class="red">$29.99</s>
+											</small>
+											<b class="green">$19.99</b>
+										</td>
+
+										<td class="hidden-480">
+											<span class="label label-info arrowed-right arrowed-in">on sale</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td>online.com</td>
+
+										<td>
+											<small>
+												<s class="red"></s>
+											</small>
+											<b class="green">$16.45</b>
+										</td>
+
+										<td class="hidden-480">
+											<span class="label label-success arrowed-in arrowed-in-right">approved</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td>newnet.com</td>
+
+										<td>
+											<small>
+												<s class="red"></s>
+											</small>
+											<b class="green">$15.00</b>
+										</td>
+
+										<td class="hidden-480">
+											<span class="label label-danger arrowed">pending</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td>web.com</td>
+
+										<td>
+											<small>
+												<s class="red">$24.99</s>
+											</small>
+											<b class="green">$19.95</b>
+										</td>
+
+										<td class="hidden-480">
+											<span class="label arrowed">
+												<s>out of stock</s>
+											</span>
+										</td>
+									</tr>
+
+									<tr>
+										<td>domain.com</td>
+
+										<td>
+											<small>
+												<s class="red"></s>
+											</small>
+											<b class="green">$12.00</b>
+										</td>
+
+										<td class="hidden-480">
+											<span class="label label-warning arrowed arrowed-right">SOLD</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!-- /.widget-main -->
+					</div><!-- /.widget-body -->
+				</div><!-- /.widget-box -->
+			</div><!-- /.col -->
+
+			<div class="col-sm-7">
+				<div class="widget-box transparent">
+					<div class="widget-header widget-header-flat">
+						<h4 class="widget-title lighter">
+							<i class="ace-icon fa fa-signal"></i>
+							Sale Stats
+						</h4>
+
+						<div class="widget-toolbar">
+							<a href="#" data-action="collapse">
+								<i class="ace-icon fa fa-chevron-up"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="widget-body">
+						<div class="widget-main padding-4">
+							<div id="sales-charts"></div>
+						</div><!-- /.widget-main -->
+					</div><!-- /.widget-body -->
+				</div><!-- /.widget-box -->
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+
+		<div class="hr hr32 hr-dotted"></div>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="widget-box transparent" id="recent-box">
+					<div class="widget-header">
+						<h4 class="widget-title lighter smaller">
+							<i class="ace-icon fa fa-rss orange"></i>RECENT
+						</h4>
+
+						<div class="widget-toolbar no-border">
+							<ul class="nav nav-tabs" id="recent-tab">
+								<li class="active">
+									<a data-toggle="tab" href="#task-tab">Tasks</a>
+								</li>
+
+								<li>
+									<a data-toggle="tab" href="#member-tab">Members</a>
+								</li>
+
+								<li>
+									<a data-toggle="tab" href="#comment-tab">Comments</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="widget-body">
+						<div class="widget-main padding-4">
+							<div class="tab-content padding-8">
+								<div id="task-tab" class="tab-pane active">
+									<h4 class="smaller lighter green">
+										<i class="ace-icon fa fa-list"></i>
+										Sortable Lists
+									</h4>
+
+									<!-- #section:pages/dashboard.tasks -->
+									<ul id="tasks" class="item-list">
+										<li class="item-orange clearfix">
+											<label class="inline">
+												<input type="checkbox" class="ace" />
+												<span class="lbl"> Answering customer questions</span>
+											</label>
+
+											<div class="pull-right easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="42">
+												<span class="percent">42</span>%
+											</div>
+										</li>
+
+										<li class="item-red clearfix">
+											<label class="inline">
+												<input type="checkbox" class="ace" />
+												<span class="lbl"> Fixing bugs</span>
+											</label>
+
+											<!-- #section:custom/extra.action-buttons -->
+											<div class="pull-right action-buttons">
+												<a href="#" class="blue">
+													<i class="ace-icon fa fa-pencil bigger-130"></i>
+												</a>
+
+												<span class="vbar"></span>
+
+												<a href="#" class="red">
+													<i class="ace-icon fa fa-trash-o bigger-130"></i>
+												</a>
+
+												<span class="vbar"></span>
+
+												<a href="#" class="green">
+													<i class="ace-icon fa fa-flag bigger-130"></i>
+												</a>
+											</div>
+
+											<!-- /section:custom/extra.action-buttons -->
+										</li>
+
+										<li class="item-default clearfix">
+											<label class="inline">
+												<input type="checkbox" class="ace" />
+												<span class="lbl"> Adding new features</span>
+											</label>
+
+											<!-- #section:elements.dropdown.hover -->
+											<div class="inline pull-right position-relative dropdown-hover">
+												<button class="btn btn-minier bigger btn-primary">
+													<i class="ace-icon fa fa-cog icon-only bigger-120"></i>
+												</button>
+
+												<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-caret dropdown-close dropdown-menu-right">
+													<li>
+														<a href="#" class="tooltip-success" data-rel="tooltip" title="Mark&nbsp;as&nbsp;done">
+															<span class="green">
+																<i class="ace-icon fa fa-check bigger-110"></i>
+															</span>
+														</a>
+													</li>
+
+													<li>
+														<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+															<span class="red">
+																<i class="ace-icon fa fa-trash-o bigger-110"></i>
+															</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+
+											<!-- /section:elements.dropdown.hover -->
+										</li>
+
+										<li class="item-blue clearfix">
+											<label class="inline">
+												<input type="checkbox" class="ace" />
+												<span class="lbl"> Upgrading scripts used in template</span>
+											</label>
+										</li>
+
+										<li class="item-grey clearfix">
+											<label class="inline">
+												<input type="checkbox" class="ace" />
+												<span class="lbl"> Adding new skins</span>
+											</label>
+										</li>
+
+										<li class="item-green clearfix">
+											<label class="inline">
+												<input type="checkbox" class="ace" />
+												<span class="lbl"> Updating server software up</span>
+											</label>
+										</li>
+
+										<li class="item-pink clearfix">
+											<label class="inline">
+												<input type="checkbox" class="ace" />
+												<span class="lbl"> Cleaning up</span>
+											</label>
+										</li>
+									</ul>
+
+									<!-- /section:pages/dashboard.tasks -->
+								</div>
+
+								<div id="member-tab" class="tab-pane">
+									<!-- #section:pages/dashboard.members -->
+									<div class="clearfix">
+										<div class="itemdiv memberdiv">
+											<div class="user">
+												<img alt="Bob Doe's avatar" src="/static/avatars/user.jpg" />
+											</div>
+
+											<div class="body">
+												<div class="name">
+													<a href="#">Bob Doe</a>
+												</div>
+
+												<div class="time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span class="green">20 min</span>
+												</div>
+
+												<div>
+													<span class="label label-warning label-sm">pending</span>
+
+													<div class="inline position-relative">
+														<button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
+															<i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+														</button>
+
+														<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+															<li>
+																<a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																	<span class="green">
+																		<i class="ace-icon fa fa-check bigger-110"></i>
+																	</span>
+																</a>
+															</li>
+
+															<li>
+																<a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																	<span class="orange">
+																		<i class="ace-icon fa fa-times bigger-110"></i>
+																	</span>
+																</a>
+															</li>
+
+															<li>
+																<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																	<span class="red">
+																		<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																	</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="itemdiv memberdiv">
+											<div class="user">
+												<img alt="Joe Doe's avatar" src="/static/avatars/avatar2.png" />
+											</div>
+
+											<div class="body">
+												<div class="name">
+													<a href="#">Joe Doe</a>
+												</div>
+
+												<div class="time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span class="green">1 hour</span>
+												</div>
+
+												<div>
+													<span class="label label-warning label-sm">pending</span>
+
+													<div class="inline position-relative">
+														<button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
+															<i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+														</button>
+
+														<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+															<li>
+																<a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																	<span class="green">
+																		<i class="ace-icon fa fa-check bigger-110"></i>
+																	</span>
+																</a>
+															</li>
+
+															<li>
+																<a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																	<span class="orange">
+																		<i class="ace-icon fa fa-times bigger-110"></i>
+																	</span>
+																</a>
+															</li>
+
+															<li>
+																<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																	<span class="red">
+																		<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																	</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="itemdiv memberdiv">
+											<div class="user">
+												<img alt="Jim Doe's avatar" src="/static/avatars/avatar.png" />
+											</div>
+
+											<div class="body">
+												<div class="name">
+													<a href="#">Jim Doe</a>
+												</div>
+
+												<div class="time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span class="green">2 hour</span>
+												</div>
+
+												<div>
+													<span class="label label-warning label-sm">pending</span>
+
+													<div class="inline position-relative">
+														<button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
+															<i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+														</button>
+
+														<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+															<li>
+																<a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																	<span class="green">
+																		<i class="ace-icon fa fa-check bigger-110"></i>
+																	</span>
+																</a>
+															</li>
+
+															<li>
+																<a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																	<span class="orange">
+																		<i class="ace-icon fa fa-times bigger-110"></i>
+																	</span>
+																</a>
+															</li>
+
+															<li>
+																<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																	<span class="red">
+																		<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																	</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="itemdiv memberdiv">
+											<div class="user">
+												<img alt="Alex Doe's avatar" src="/static/avatars/avatar5.png" />
+											</div>
+
+											<div class="body">
+												<div class="name">
+													<a href="#">Alex Doe</a>
+												</div>
+
+												<div class="time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span class="green">3 hour</span>
+												</div>
+
+												<div>
+													<span class="label label-danger label-sm">blocked</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="itemdiv memberdiv">
+											<div class="user">
+												<img alt="Bob Doe's avatar" src="/static/avatars/avatar2.png" />
+											</div>
+
+											<div class="body">
+												<div class="name">
+													<a href="#">Bob Doe</a>
+												</div>
+
+												<div class="time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span class="green">6 hour</span>
+												</div>
+
+												<div>
+													<span class="label label-success label-sm arrowed-in">approved</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="itemdiv memberdiv">
+											<div class="user">
+												<img alt="Susan's avatar" src="/static/avatars/avatar3.png" />
+											</div>
+
+											<div class="body">
+												<div class="name">
+													<a href="#">Susan</a>
+												</div>
+
+												<div class="time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span class="green">yesterday</span>
+												</div>
+
+												<div>
+													<span class="label label-success label-sm arrowed-in">approved</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="itemdiv memberdiv">
+											<div class="user">
+												<img alt="Phil Doe's avatar" src="/static/avatars/avatar4.png" />
+											</div>
+
+											<div class="body">
+												<div class="name">
+													<a href="#">Phil Doe</a>
+												</div>
+
+												<div class="time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span class="green">2 days ago</span>
+												</div>
+
+												<div>
+													<span class="label label-info label-sm arrowed-in arrowed-in-right">online</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="itemdiv memberdiv">
+											<div class="user">
+												<img alt="Alexa Doe's avatar" src="/static/avatars/avatar1.png" />
+											</div>
+
+											<div class="body">
+												<div class="name">
+													<a href="#">Alexa Doe</a>
+												</div>
+
+												<div class="time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span class="green">3 days ago</span>
+												</div>
+
+												<div>
+													<span class="label label-success label-sm arrowed-in">approved</span>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="space-4"></div>
+
+									<div class="center">
+										<i class="ace-icon fa fa-users fa-2x green middle"></i>
+
+										&nbsp;
+										<a href="#" class="btn btn-sm btn-white btn-info">
+											See all members &nbsp;
+											<i class="ace-icon fa fa-arrow-right"></i>
+										</a>
+									</div>
+
+									<div class="hr hr-double hr8"></div>
+
+									<!-- /section:pages/dashboard.members -->
+								</div><!-- /.#member-tab -->
+
+								<div id="comment-tab" class="tab-pane">
+									<!-- #section:pages/dashboard.comments -->
+									<div class="comments">
+										<div class="itemdiv commentdiv">
+											<div class="user">
+												<img alt="Bob Doe's Avatar" src="/static/avatars/avatar.png" />
+											</div>
+
+											<div class="body">
+												<div class="name">
+													<a href="#">Bob Doe</a>
+												</div>
+
+												<div class="time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span class="green">6 min</span>
+												</div>
+
+												<div class="text">
+													<i class="ace-icon fa fa-quote-left"></i>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+												</div>
+											</div>
+
+											<div class="tools">
+												<div class="inline position-relative">
+													<button class="btn btn-minier bigger btn-yellow dropdown-toggle" data-toggle="dropdown">
+														<i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+													</button>
+
+													<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+														<li>
+															<a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																<span class="green">
+																	<i class="ace-icon fa fa-check bigger-110"></i>
+																</span>
+															</a>
+														</li>
+
+														<li>
+															<a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																<span class="orange">
+																	<i class="ace-icon fa fa-times bigger-110"></i>
+																</span>
+															</a>
+														</li>
+
+														<li>
+															<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																<span class="red">
+																	<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="itemdiv commentdiv">
+											<div class="user">
+												<img alt="Jennifer's Avatar" src="/static/avatars/avatar1.png" />
+											</div>
+
+											<div class="body">
+												<div class="name">
+													<a href="#">Jennifer</a>
+												</div>
+
+												<div class="time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span class="blue">15 min</span>
+												</div>
+
+												<div class="text">
+													<i class="ace-icon fa fa-quote-left"></i>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+												</div>
+											</div>
+
+											<div class="tools">
+												<div class="action-buttons bigger-125">
+													<a href="#">
+														<i class="ace-icon fa fa-pencil blue"></i>
+													</a>
+
+													<a href="#">
+														<i class="ace-icon fa fa-trash-o red"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="itemdiv commentdiv">
+											<div class="user">
+												<img alt="Joe's Avatar" src="/static/avatars/avatar2.png" />
+											</div>
+
+											<div class="body">
+												<div class="name">
+													<a href="#">Joe</a>
+												</div>
+
+												<div class="time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span class="orange">22 min</span>
+												</div>
+
+												<div class="text">
+													<i class="ace-icon fa fa-quote-left"></i>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+												</div>
+											</div>
+
+											<div class="tools">
+												<div class="action-buttons bigger-125">
+													<a href="#">
+														<i class="ace-icon fa fa-pencil blue"></i>
+													</a>
+
+													<a href="#">
+														<i class="ace-icon fa fa-trash-o red"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="itemdiv commentdiv">
+											<div class="user">
+												<img alt="Rita's Avatar" src="/static/avatars/avatar3.png" />
+											</div>
+
+											<div class="body">
+												<div class="name">
+													<a href="#">Rita</a>
+												</div>
+
+												<div class="time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span class="red">50 min</span>
+												</div>
+
+												<div class="text">
+													<i class="ace-icon fa fa-quote-left"></i>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+												</div>
+											</div>
+
+											<div class="tools">
+												<div class="action-buttons bigger-125">
+													<a href="#">
+														<i class="ace-icon fa fa-pencil blue"></i>
+													</a>
+
+													<a href="#">
+														<i class="ace-icon fa fa-trash-o red"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="hr hr8"></div>
+
+									<div class="center">
+										<i class="ace-icon fa fa-comments-o fa-2x green middle"></i>
+
+										&nbsp;
+										<a href="#" class="btn btn-sm btn-white btn-info">
+											See all comments &nbsp;
+											<i class="ace-icon fa fa-arrow-right"></i>
+										</a>
+									</div>
+
+									<div class="hr hr-double hr8"></div>
+
+									<!-- /section:pages/dashboard.comments -->
+								</div>
+							</div>
+						</div><!-- /.widget-main -->
+					</div><!-- /.widget-body -->
+				</div><!-- /.widget-box -->
+			</div><!-- /.col -->
+
+			<div class="col-sm-6">
+				<div class="widget-box">
+					<div class="widget-header">
+						<h4 class="widget-title lighter smaller">
+							<i class="ace-icon fa fa-comment blue"></i>
+							Conversation
+						</h4>
+					</div>
+
+					<div class="widget-body">
+						<div class="widget-main no-padding">
+							<!-- #section:pages/dashboard.conversations -->
+							<div class="dialogs">
+								<div class="itemdiv dialogdiv">
+									<div class="user">
+										<img alt="Alexa's Avatar" src="/static/avatars/avatar1.png" />
+									</div>
+
+									<div class="body">
+										<div class="time">
+											<i class="ace-icon fa fa-clock-o"></i>
+											<span class="green">4 sec</span>
+										</div>
+
+										<div class="name">
+											<a href="#">Alexa</a>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+
+										<div class="tools">
+											<a href="#" class="btn btn-minier btn-info">
+												<i class="icon-only ace-icon fa fa-share"></i>
+											</a>
+										</div>
 									</div>
 								</div>
 
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> Full Length </label>
+								<div class="itemdiv dialogdiv">
+									<div class="user">
+										<img alt="John's Avatar" src="/static/avatars/avatar.png" />
+									</div>
 
-									<div class="col-sm-9">
-										<input type="text" id="form-field-1-1" placeholder="Text Field" class="form-control" />
+									<div class="body">
+										<div class="time">
+											<i class="ace-icon fa fa-clock-o"></i>
+											<span class="blue">38 sec</span>
+										</div>
+
+										<div class="name">
+											<a href="#">John</a>
+										</div>
+										<div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
+
+										<div class="tools">
+											<a href="#" class="btn btn-minier btn-info">
+												<i class="icon-only ace-icon fa fa-share"></i>
+											</a>
+										</div>
 									</div>
 								</div>
 
-								<!-- /section:elements.form -->
-								<div class="space-4"></div>
+								<div class="itemdiv dialogdiv">
+									<div class="user">
+										<img alt="Bob's Avatar" src="/static/avatars/user.jpg" />
+									</div>
 
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Password Field </label>
+									<div class="body">
+										<div class="time">
+											<i class="ace-icon fa fa-clock-o"></i>
+											<span class="orange">2 min</span>
+										</div>
 
-									<div class="col-sm-9">
-										<input type="password" id="form-field-2" placeholder="Password" class="col-xs-10 col-sm-5" />
-										<span class="help-inline col-xs-12 col-sm-7">
-											<span class="middle">Inline help text</span>
+										<div class="name">
+											<a href="#">Bob</a>
+											<span class="label label-info arrowed arrowed-in-right">admin</span>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+
+										<div class="tools">
+											<a href="#" class="btn btn-minier btn-info">
+												<i class="icon-only ace-icon fa fa-share"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="itemdiv dialogdiv">
+									<div class="user">
+										<img alt="Jim's Avatar" src="/static/avatars/avatar4.png" />
+									</div>
+
+									<div class="body">
+										<div class="time">
+											<i class="ace-icon fa fa-clock-o"></i>
+											<span class="grey">3 min</span>
+										</div>
+
+										<div class="name">
+											<a href="#">Jim</a>
+										</div>
+										<div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
+
+										<div class="tools">
+											<a href="#" class="btn btn-minier btn-info">
+												<i class="icon-only ace-icon fa fa-share"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="itemdiv dialogdiv">
+									<div class="user">
+										<img alt="Alexa's Avatar" src="/static/avatars/avatar1.png" />
+									</div>
+
+									<div class="body">
+										<div class="time">
+											<i class="ace-icon fa fa-clock-o"></i>
+											<span class="green">4 min</span>
+										</div>
+
+										<div class="name">
+											<a href="#">Alexa</a>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+										<div class="tools">
+											<a href="#" class="btn btn-minier btn-info">
+												<i class="icon-only ace-icon fa fa-share"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- /section:pages/dashboard.conversations -->
+							<form>
+								<div class="form-actions">
+									<div class="input-group">
+										<input placeholder="Type your message here ..." type="text" class="form-control" name="message" />
+										<span class="input-group-btn">
+											<button class="btn btn-sm btn-info no-radius" type="button">
+												<i class="ace-icon fa fa-share"></i>
+												Send
+											</button>
 										</span>
 									</div>
 								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"> Readonly field </label>
-
-									<div class="col-sm-9">
-										<input readonly="" type="text" class="col-xs-10 col-sm-5" id="form-input-readonly" value="This text field is readonly!" />
-										<span class="help-inline col-xs-12 col-sm-7">
-											<label class="middle">
-												<input class="ace" type="checkbox" id="id-disable-check" />
-												<span class="lbl"> Disable it!</span>
-											</label>
-										</span>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right">Input with Icon</label>
-
-									<div class="col-sm-9">
-										<!-- #section:elements.form.input-icon -->
-										<span class="input-icon">
-											<input type="text" id="form-field-icon-1" />
-											<i class="ace-icon fa fa-leaf blue"></i>
-										</span>
-
-										<span class="input-icon input-icon-right">
-											<input type="text" id="form-field-icon-2" />
-											<i class="ace-icon fa fa-leaf green"></i>
-										</span>
-
-										<!-- /section:elements.form.input-icon -->
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Tooltip and help button</label>
-
-									<div class="col-sm-9">
-										<input data-rel="tooltip" type="text" id="form-field-6" placeholder="Tooltip on hover" title="Hello Tooltip!" data-placement="bottom" />
-										<span class="help-button" data-rel="popover" data-trigger="hover" data-placement="left" data-content="More details." title="Popover on hover">?</span>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Small Dropdown</label>
-
-									<div class="col-sm-9">
-										<select class="small m-wrap" tabindex="1">
-											<option value="Category 1">Category 1</option>
-											<option value="Category 2">Category 2</option>
-											<option value="Category 3">Category 5</option>
-											<option value="Category 4">Category 4</option>
-										</select>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Medium Dropdown</label>
-
-									<div class="col-sm-9">
-										<select class="medium m-wrap" tabindex="1">
-											<option value="Category 1">Category 1</option>
-											<option value="Category 2">Category 2</option>
-											<option value="Category 3">Category 5</option>
-											<option value="Category 4">Category 4</option>
-										</select>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Large Dropdown</label>
-
-									<div class="col-sm-9">
-										<select class="large m-wrap" tabindex="1">
-											<option value="Category 1">Category 1</option>
-											<option value="Category 2">Category 2</option>
-											<option value="Category 3">Category 5</option>
-											<option value="Category 4">Category 4</option>
-										</select>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Radio Buttons</label>
-
-									<div class="col-sm-9">
-										<div class="radio custom_radio">
-											<label>
-												<input name="form-field-radio" type="radio" class="ace" />
-												<span class="lbl"> radio option 1</span>
-											</label>
-										</div>
-
-										<div class="radio custom_radio">
-											<label>
-												<input name="form-field-radio" type="radio" class="ace" />
-												<span class="lbl"> radio option 2</span>
-											</label>
-										</div>
-
-										<div class="radio custom_radio">
-											<label>
-												<input name="form-field-radio" type="radio" class="ace" />
-												<span class="lbl"> radio option 3</span>
-											</label>
-										</div>
-
-										<div class="radio custom_radio">
-											<label>
-												<input disabled="" name="form-field-radio" type="radio" class="ace" />
-												<span class="lbl"> disabled</span>
-											</label>
-										</div>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Radio Buttons</label>
-
-									<div class="col-sm-9">
-										<div class="radio">
-											<label>
-												<input name="form-field-radio" type="radio" class="ace" />
-												<span class="lbl"> radio option 1</span>
-											</label>
-										</div>
-
-										<div class="radio">
-											<label>
-												<input name="form-field-radio" type="radio" class="ace" />
-												<span class="lbl"> radio option 2</span>
-											</label>
-										</div>
-
-										<div class="radio">
-											<label>
-												<input name="form-field-radio" type="radio" class="ace" />
-												<span class="lbl"> radio option 3</span>
-											</label>
-										</div>
-
-										<div class="radio">
-											<label>
-												<input disabled="" name="form-field-radio" type="radio" class="ace" />
-												<span class="lbl"> disabled</span>
-											</label>
-										</div>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Checkbox</label>
-
-									<div class="col-xs-12 col-sm-5">
-										<div class="checkbox custom_checkbox">
-												<label>
-													<input name="form-field-checkbox" type="checkbox" class="ace" />
-													<span class="lbl"> choice 1</span>
-												</label>
-											</div>
-
-											<div class="checkbox custom_checkbox">
-												<label>
-													<input name="form-field-checkbox" type="checkbox" class="ace" />
-													<span class="lbl"> choice 2</span>
-												</label>
-											</div>
-
-											<div class="checkbox custom_checkbox">
-												<label>
-													<input name="form-field-checkbox" class="ace ace-checkbox-2" type="checkbox" />
-													<span class="lbl"> choice 3</span>
-												</label>
-											</div>
-
-											<div class="checkbox custom_checkbox">
-												<label class="block">
-													<input name="form-field-checkbox" disabled="" type="checkbox" class="ace" />
-													<span class="lbl"> disabled</span>
-												</label>
-											</div>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Checkbox</label>
-
-									<div class="col-xs-12 col-sm-5">
-										<div class="checkbox">
-											<label>
-												<input name="form-field-checkbox" type="checkbox" class="ace" />
-												<span class="lbl"> choice 1</span>
-											</label>
-										</div>
-
-										<div class="checkbox">
-											<label>
-												<input name="form-field-checkbox" type="checkbox" class="ace" />
-												<span class="lbl"> choice 2</span>
-											</label>
-										</div>
-
-										<div class="checkbox">
-											<label>
-												<input name="form-field-checkbox" class="ace ace-checkbox-2" type="checkbox" />
-												<span class="lbl"> choice 3</span>
-											</label>
-										</div>
-
-										<div class="checkbox">
-											<label class="block">
-												<input name="form-field-checkbox" disabled="" type="checkbox" class="ace" />
-												<span class="lbl"> disabled</span>
-											</label>
-										</div>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Textarea</label>
-
-									<div class="col-xs-12 col-sm-5">
-										<textarea class="medium m-wrap" rows="3"></textarea>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Default Textarea</label>
-
-									<div class="col-xs-12 col-sm-5">
-										<!-- <textarea class="large m-wrap" rows="3"></textarea> -->
-										<textarea class="form-control limited large m-wrap" id="form-field-8" placeholder="Default Text"></textarea>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Large Textarea</label>
-
-									<div class="col-xs-12 col-sm-5">
-										<textarea class="form-control limited large m-wrap" id="form-field-9" maxlength="50"></textarea>
-
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Date Picker</label>
-
-									<div class="col-xs-12 col-sm-5">
-										<div class="input-group">
-											<input class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd-mm-yyyy" />
-											<span class="input-group-addon">
-												<i class="fa fa-calendar bigger-110"></i>
-											</span>
-										</div>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Date Range Picker</label>
-
-									<div class="col-xs-12 col-sm-5">
-										<div class="input-group">
-											<span class="input-group-addon">
-												<i class="fa fa-calendar bigger-110"></i>
-											</span>
-
-											<input class="form-control" type="text" name="date-range-picker" id="id-date-range-picker-1" />
-										</div>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Range Picker</label>
-
-									<div class="col-xs-12 col-sm-5">
-										<div class="input-daterange input-group">
-											<input type="text" class="input-sm form-control" name="start" />
-											<span class="input-group-addon">
-												<i class="fa fa-exchange"></i>
-											</span>
-
-											<input type="text" class="input-sm form-control" name="end" />
-										</div>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Time Picker</label>
-
-									<div class="col-xs-12 col-sm-5">
-										<div class="input-group bootstrap-timepicker">
-											<input id="timepicker1" type="text" class="form-control" />
-											<span class="input-group-addon">
-												<i class="fa fa-clock-o bigger-110"></i>
-											</span>
-										</div>
-									</div>
-								</div>
-
-								<div class="space-4"></div>
-
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="form-field-6">Date/Time Picker</label>
-
-									<div class="col-xs-12 col-sm-5">
-										<div class="input-group">
-											<input id="date-timepicker1" type="text" class="form-control" />
-											<span class="input-group-addon">
-												<i class="fa fa-clock-o bigger-110"></i>
-											</span>
-										</div>
-									</div>
-								</div>
-
-								<div class="clearfix form-actions">
-									<div class="col-md-offset-3 col-md-9">
-										<button class="btn btn-info" type="button">
-											<i class="ace-icon fa fa-check bigger-110"></i>
-											Submit
-										</button>
-
-										&nbsp; &nbsp; &nbsp;
-										<button class="btn" type="reset">
-											<i class="ace-icon fa fa-undo bigger-110"></i>
-											Reset
-										</button>
-									</div>
-								</div>
-
-								<div class="hr hr-24"></div>
-
-								<div class="form-group">
-									<label class="control-label col-xs-12 col-sm-3">On/Off Switches</label>
-
-									<div class="controls col-xs-12 col-sm-9">
-										<!-- #section:custom/checkbox.switch -->
-										<div class="row">
-											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch" type="checkbox" />
-													<span class="lbl"></span>
-												</label>
-											</div>
-
-											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch ace-switch-2" type="checkbox" />
-													<span class="lbl"></span>
-												</label>
-											</div>
-
-											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch ace-switch-3" type="checkbox" />
-													<span class="lbl"></span>
-												</label>
-											</div>
-
-											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch" type="checkbox" />
-													<span class="lbl" data-lbl="CUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOM"></span>
-												</label>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch ace-switch-4" type="checkbox" />
-													<span class="lbl"></span>
-												</label>
-											</div>
-
-											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch ace-switch-5" type="checkbox" />
-													<span class="lbl"></span>
-												</label>
-											</div>
-
-											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch ace-switch-6" type="checkbox" />
-													<span class="lbl"></span>
-												</label>
-											</div>
-
-											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch ace-switch-7" type="checkbox" />
-													<span class="lbl"></span>
-												</label>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch btn-rotate" type="checkbox" />
-													<span class="lbl"></span>
-												</label>
-											</div>
-
-											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch ace-switch-4 btn-rotate" type="checkbox" />
-													<span class="lbl"></span>
-												</label>
-											</div>
-
-											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch ace-switch-4 btn-empty" type="checkbox" />
-													<span class="lbl"></span>
-												</label>
-											</div>
-
-											<div class="col-xs-3">
-												<label>
-													<input name="switch-field-1" class="ace ace-switch ace-switch-4 btn-flat" type="checkbox" />
-													<span class="lbl"></span>
-												</label>
-											</div>
-										</div>
-
-										<!-- /section:custom/checkbox.switch -->
-									</div>
-								</div>
-
-								<hr />
 							</form>
+						</div><!-- /.widget-main -->
+					</div><!-- /.widget-body -->
+				</div><!-- /.widget-box -->
+			</div><!-- /.col -->
+		</div><!-- /.row -->
 
-							<div id="modal-form" class="modal" tabindex="-1">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											<h4 class="blue bigger">Please fill the following form fields</h4>
-										</div>
+		<!-- PAGE CONTENT ENDS -->
+	</div><!-- /.col -->
+</div><!-- /.row -->
 
-										<div class="modal-body">
-											<div class="row">
-												<div class="col-xs-12 col-sm-5">
-													<div class="space"></div>
+<!-- page specific plugin scripts -->
 
-													<input type="file" />
-												</div>
-
-												<div class="col-xs-12 col-sm-7">
-													<div class="form-group">
-														<label for="form-field-select-3">Location</label>
-
-														<div>
-															<select class="chosen-select" data-placeholder="Choose a Country...">
-																<option value="">&nbsp;</option>
-																<option value="AL">Alabama</option>
-																<option value="AK">Alaska</option>
-																<option value="AZ">Arizona</option>
-																<option value="AR">Arkansas</option>
-																<option value="CA">California</option>
-																<option value="CO">Colorado</option>
-																<option value="CT">Connecticut</option>
-																<option value="DE">Delaware</option>
-																<option value="FL">Florida</option>
-																<option value="GA">Georgia</option>
-																<option value="HI">Hawaii</option>
-																<option value="ID">Idaho</option>
-																<option value="IL">Illinois</option>
-																<option value="IN">Indiana</option>
-																<option value="IA">Iowa</option>
-																<option value="KS">Kansas</option>
-																<option value="KY">Kentucky</option>
-																<option value="LA">Louisiana</option>
-																<option value="ME">Maine</option>
-																<option value="MD">Maryland</option>
-																<option value="MA">Massachusetts</option>
-																<option value="MI">Michigan</option>
-																<option value="MN">Minnesota</option>
-																<option value="MS">Mississippi</option>
-																<option value="MO">Missouri</option>
-																<option value="MT">Montana</option>
-																<option value="NE">Nebraska</option>
-																<option value="NV">Nevada</option>
-																<option value="NH">New Hampshire</option>
-																<option value="NJ">New Jersey</option>
-																<option value="NM">New Mexico</option>
-																<option value="NY">New York</option>
-																<option value="NC">North Carolina</option>
-																<option value="ND">North Dakota</option>
-																<option value="OH">Ohio</option>
-																<option value="OK">Oklahoma</option>
-																<option value="OR">Oregon</option>
-																<option value="PA">Pennsylvania</option>
-																<option value="RI">Rhode Island</option>
-																<option value="SC">South Carolina</option>
-																<option value="SD">South Dakota</option>
-																<option value="TN">Tennessee</option>
-																<option value="TX">Texas</option>
-																<option value="UT">Utah</option>
-																<option value="VT">Vermont</option>
-																<option value="VA">Virginia</option>
-																<option value="WA">Washington</option>
-																<option value="WV">West Virginia</option>
-																<option value="WI">Wisconsin</option>
-																<option value="WY">Wyoming</option>
-															</select>
-														</div>
-													</div>
-
-													<div class="space-4"></div>
-
-													<div class="form-group">
-														<label for="form-field-username">Username</label>
-
-														<div>
-															<input class="input-large" type="text" id="form-field-username" placeholder="Username" value="alexdoe" />
-														</div>
-													</div>
-
-													<div class="space-4"></div>
-
-													<div class="form-group">
-														<label for="form-field-first">Name</label>
-
-														<div>
-															<input class="input-medium" type="text" id="form-field-first" placeholder="First Name" value="Alex" />
-															<input class="input-medium" type="text" id="form-field-last" placeholder="Last Name" value="Doe" />
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="modal-footer">
-											<button class="btn btn-sm" data-dismiss="modal">
-												<i class="ace-icon fa fa-times"></i>
-												Cancel
-											</button>
-
-											<button class="btn btn-sm btn-primary">
-												<i class="ace-icon fa fa-check"></i>
-												Save
-											</button>
-										</div>
-									</div>
-								</div>
-							</div><!-- PAGE CONTENT ENDS -->
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-				</div><!-- /.page-content -->
-			</div><!-- /.main-content -->
-
-			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-			</a>
-		</div><!-- /.main-container -->
-
-		<!-- basic scripts -->
-
-		<!--[if !IE]> -->
-		<script type="text/javascript">
-			window.jQuery || document.write("<script src='/static/js/jquery.min.js'>"+"<"+"/script>");
-		</script>
-
-		<!-- <![endif]-->
-
-		<!--[if IE]>
-<script type="text/javascript">
- window.jQuery || document.write("<script src='../assets/js/jquery1x.min.js'>"+"<"+"/script>");
-</script>
+<!--[if lte IE 8]>
+  <script src="/static/js/excanvas.min.js"></script>
 <![endif]-->
-		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='/static/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-		</script>
-		<script src="/static/js/bootstrap.min.js"></script>
 
-		<!-- page specific plugin scripts -->
 
-		<!--[if lte IE 8]>
-		  <script src="../assets/js/excanvas.min.js"></script>
-		<![endif]-->
-		<script src="/static/js/jquery-ui.custom.min.js"></script>
-		<script src="/static/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="/static/js/chosen.jquery.min.js"></script>
-		<script src="/static/js/fuelux/fuelux.spinner.min.js"></script>
-		<script src="/static/js/date-time/bootstrap-datepicker.min.js"></script>
-		<script src="/static/js/date-time/bootstrap-timepicker.min.js"></script>
-		<script src="/static/js/date-time/moment.min.js"></script>
-		<script src="/static/js/date-time/daterangepicker.min.js"></script>
-		<script src="/static/js/date-time/bootstrap-datetimepicker.min.js"></script>
-		<script src="/static/js/bootstrap-colorpicker.min.js"></script>
-		<script src="/static/js/jquery.knob.min.js"></script>
-		<script src="/static/js/jquery.autosize.min.js"></script>
-		<script src="/static/js/jquery.inputlimiter.1.3.1.min.js"></script>
-		<script src="/static/js/jquery.maskedinput.min.js"></script>
-		<script src="/static/js/bootstrap-tag.min.js"></script>
+<?php
+	$cssArr = [
+		'/static/css/ace.onpage-help.css',
+		'/static/docs/assets/js/themes/sunburst.css',
+	];
+	foreach($cssArr as $css){
+		$this->registerCssFile($css, ['depends'=>['backend\assets\AppAsset']]);
+	}
+	$jsArr = [
+		'/static/js/jquery-ui.custom.min.js',
+		'/static/js/jquery.ui.touch-punch.min.js',
+		'/static/js/jquery.easypiechart.min.js',
+		'/static/js/jquery.sparkline.min.js',
+		'/static/js/flot/jquery.flot.min.js',
+		'/static/js/flot/jquery.flot.pie.min.js',
+		'/static/js/flot/jquery.flot.resize.min.js',
+		'/static/docs/assets/js/rainbow.js',
+		'/static/docs/assets/js/language/generic.js',
+		'/static/docs/assets/js/language/html.js',
+		'/static/docs/assets/js/language/css.js',
+		'/static/docs/assets/js/language/javascript.js',
+	];
 
-		<!-- ace scripts -->
-		<script src="/static/js/ace-elements.min.js"></script>
-		<script src="/static/js/ace.min.js"></script>
+	foreach($jsArr as $js){
+		$this->registerJsFile($js, ['depends'=>['backend\assets\AppAsset']]);
+	}
 
-		<!-- inline scripts related to this page -->
-		<script type="text/javascript">
-			jQuery(function($) {
-				$('#id-disable-check').on('click', function() {
-					var inp = $('#form-input-readonly').get(0);
-					if(inp.hasAttribute('disabled')) {
-						inp.setAttribute('readonly' , 'true');
-						inp.removeAttribute('disabled');
-						inp.value="This text field is readonly!";
-					}
-					else {
-						inp.setAttribute('disabled' , 'disabled');
-						inp.removeAttribute('readonly');
-						inp.value="This text field is disabled!";
-					}
-				});
-			
-			
-				$('.chosen-select').chosen({allow_single_deselect:true}); 
-				//resize the chosen on window resize
-				$(window).on('resize.chosen', function() {
-					var w = $('.chosen-select').parent().width();
-					$('.chosen-select').next().css({'width':w});
-				}).trigger('resize.chosen');
-			
-				$('#chosen-multiple-style').on('click', function(e){
-					var target = $(e.target).find('input[type=radio]');
-					var which = parseInt(target.val());
-					if(which == 2) $('#form-field-select-4').addClass('tag-input-style');
-					 else $('#form-field-select-4').removeClass('tag-input-style');
-				});
-			
-			
-				$('[data-rel=tooltip]').tooltip({container:'body'});
-				$('[data-rel=popover]').popover({container:'body'});
-				
-				$('textarea[class*=autosize]').autosize({append: "\n"});
-				$('textarea.limited').inputlimiter({
-					remText: '%n character%s remaining...',
-					limitText: 'max allowed : %n.'
-				});
-			
-				$.mask.definitions['~']='[+-]';
-				$('.input-mask-date').mask('99/99/9999');
-				$('.input-mask-phone').mask('(999) 999-9999');
-				$('.input-mask-eyescript').mask('~9.99 ~9.99 999');
-				$(".input-mask-product").mask("a*-999-a999",{placeholder:" ",completed:function(){alert("You typed the following: "+this.val());}});
-			
-			
-			
-				$( "#input-size-slider" ).css('width','200px').slider({
-					value:1,
-					range: "min",
-					min: 1,
-					max: 8,
-					step: 1,
-					slide: function( event, ui ) {
-						var sizing = ['', 'input-sm', 'input-lg', 'input-mini', 'input-small', 'input-medium', 'input-large', 'input-xlarge', 'input-xxlarge'];
-						var val = parseInt(ui.value);
-						$('#form-field-4').attr('class', sizing[val]).val('.'+sizing[val]);
-					}
-				});
-			
-				$( "#input-span-slider" ).slider({
-					value:1,
-					range: "min",
-					min: 1,
-					max: 12,
-					step: 1,
-					slide: function( event, ui ) {
-						var val = parseInt(ui.value);
-						$('#form-field-5').attr('class', 'col-xs-'+val).val('.col-xs-'+val);
-					}
-				});
-			
-			
-				
-				//"jQuery UI Slider"
-				//range slider tooltip example
-				$( "#slider-range" ).css('height','200px').slider({
-					orientation: "vertical",
-					range: true,
-					min: 0,
-					max: 100,
-					values: [ 17, 67 ],
-					slide: function( event, ui ) {
-						var val = ui.values[$(ui.handle).index()-1] + "";
-			
-						if( !ui.handle.firstChild ) {
-							$("<div class='tooltip right in' style='display:none;left:16px;top:-6px;'><div class='tooltip-arrow'></div><div class='tooltip-inner'></div></div>")
-							.prependTo(ui.handle);
-						}
-						$(ui.handle.firstChild).show().children().eq(1).text(val);
-					}
-				}).find('a').on('blur', function(){
-					$(this.firstChild).hide();
-				});
-				
-				
-				$( "#slider-range-max" ).slider({
-					range: "max",
-					min: 1,
-					max: 10,
-					value: 2
-				});
-				
-				$( "#slider-eq > span" ).css({width:'90%', 'float':'left', margin:'15px'}).each(function() {
-					// read initial values from markup and remove that
-					var value = parseInt( $( this ).text(), 10 );
-					$( this ).empty().slider({
-						value: value,
-						range: "min",
-						animate: true
-						
-					});
-				});
-				
-				$("#slider-eq > span.ui-slider-purple").slider('disable');//disable third item
-			
-				
-				$('#id-input-file-1 , #id-input-file-2').ace_file_input({
-					no_file:'No File ...',
-					btn_choose:'Choose',
-					btn_change:'Change',
-					droppable:false,
-					onchange:null,
-					thumbnail:false //| true | large
-					//whitelist:'gif|png|jpg|jpeg'
-					//blacklist:'exe|php'
-					//onchange:''
-					//
-				});
-				//pre-show a file name, for example a previously selected file
-				//$('#id-input-file-1').ace_file_input('show_file_list', ['myfile.txt'])
-			
-			
-				$('#id-input-file-3').ace_file_input({
-					style:'well',
-					btn_choose:'Drop files here or click to choose',
-					btn_change:null,
-					no_icon:'ace-icon fa fa-cloud-upload',
-					droppable:true,
-					thumbnail:'small'//large | fit
-					//,icon_remove:null//set null, to hide remove/reset button
-					/**,before_change:function(files, dropped) {
-						//Check an example below
-						//or examples/file-upload.html
-						return true;
-					}*/
-					/**,before_remove : function() {
-						return true;
-					}*/
-					,
-					preview_error : function(filename, error_code) {
-						//name of the file that failed
-						//error_code values
-						//1 = 'FILE_LOAD_FAILED',
-						//2 = 'IMAGE_LOAD_FAILED',
-						//3 = 'THUMBNAIL_FAILED'
-						//alert(error_code);
-					}
-			
-				}).on('change', function(){
-					//console.log($(this).data('ace_input_files'));
-					//console.log($(this).data('ace_input_method'));
-				});
-				
-			
-				//dynamically change allowed formats by changing allowExt && allowMime function
-				$('#id-file-format').removeAttr('checked').on('change', function() {
-					var whitelist_ext, whitelist_mime;
-					var btn_choose
-					var no_icon
-					if(this.checked) {
-						btn_choose = "Drop images here or click to choose";
-						no_icon = "ace-icon fa fa-picture-o";
-			
-						whitelist_ext = ["jpeg", "jpg", "png", "gif" , "bmp"];
-						whitelist_mime = ["image/jpg", "image/jpeg", "image/png", "image/gif", "image/bmp"];
-					}
-					else {
-						btn_choose = "Drop files here or click to choose";
-						no_icon = "ace-icon fa fa-cloud-upload";
-						
-						whitelist_ext = null;//all extensions are acceptable
-						whitelist_mime = null;//all mimes are acceptable
-					}
-					var file_input = $('#id-input-file-3');
-					file_input
-					.ace_file_input('update_settings',
-					{
-						'btn_choose': btn_choose,
-						'no_icon': no_icon,
-						'allowExt': whitelist_ext,
-						'allowMime': whitelist_mime
-					})
-					file_input.ace_file_input('reset_input');
-					
-					file_input
-					.off('file.error.ace')
-					.on('file.error.ace', function(e, info) {
-						//console.log(info.file_count);//number of selected files
-						//console.log(info.invalid_count);//number of invalid files
-						//console.log(info.error_list);//a list of errors in the following format
-						
-						//info.error_count['ext']
-						//info.error_count['mime']
-						//info.error_count['size']
-						
-						//info.error_list['ext']  = [list of file names with invalid extension]
-						//info.error_list['mime'] = [list of file names with invalid mimetype]
-						//info.error_list['size'] = [list of file names with invalid size]
-						
-						
-						/**
-						if( !info.dropped ) {
-							//perhapse reset file field if files have been selected, and there are invalid files among them
-							//when files are dropped, only valid files will be added to our file array
-							e.preventDefault();//it will rest input
-						}
-						*/
-						
-						
-						//if files have been selected (not dropped), you can choose to reset input
-						//because browser keeps all selected files anyway and this cannot be changed
-						//we can only reset file field to become empty again
-						//on any case you still should check files with your server side script
-						//because any arbitrary file can be uploaded by user and it's not safe to rely on browser-side measures
-					});
-				
-				});
-			
-				$('#spinner1').ace_spinner({value:0,min:0,max:200,step:10, btn_up_class:'btn-info' , btn_down_class:'btn-info'})
-				.on('change', function(){
-					//alert(this.value)
-				});
-				$('#spinner2').ace_spinner({value:0,min:0,max:10000,step:100, touch_spinner: true, icon_up:'ace-icon fa fa-caret-up', icon_down:'ace-icon fa fa-caret-down'});
-				$('#spinner3').ace_spinner({value:0,min:-100,max:100,step:10, on_sides: true, icon_up:'ace-icon fa fa-plus smaller-75', icon_down:'ace-icon fa fa-minus smaller-75', btn_up_class:'btn-success' , btn_down_class:'btn-danger'});
-				//$('#spinner1').ace_spinner('disable').ace_spinner('value', 11);
-				//or
-				//$('#spinner1').closest('.ace-spinner').spinner('disable').spinner('enable').spinner('value', 11);//disable, enable or change value
-				//$('#spinner1').closest('.ace-spinner').spinner('value', 0);//reset to 0
-			
-			
-				//datepicker plugin
-				//link
-				$('.date-picker').datepicker({
-					autoclose: true,
-					todayHighlight: true
-				})
-				//show datepicker when clicking on the icon
-				.next().on(ace.click_event, function(){
-					$(this).prev().focus();
-				});
-			
-				//or change it into a date range picker
-				$('.input-daterange').datepicker({autoclose:true});
-			
-			
-				//to translate the daterange picker, please copy the "examples/daterange-fr.js" contents here before initialization
-				$('input[name=date-range-picker]').daterangepicker({
-					'applyClass' : 'btn-sm btn-success',
-					'cancelClass' : 'btn-sm btn-default',
-					locale: {
-						applyLabel: 'Apply',
-						cancelLabel: 'Cancel',
-					}
-				})
-				.prev().on(ace.click_event, function(){
-					$(this).next().focus();
-				});
-			
-			
-				$('#timepicker1').timepicker({
-					minuteStep: 1,
-					showSeconds: true,
-					showMeridian: false
-				}).next().on(ace.click_event, function(){
-					$(this).prev().focus();
-				});
-				
-				$('#date-timepicker1').datetimepicker().next().on(ace.click_event, function(){
-					$(this).prev().focus();
-				});
-				
-			
-				$('#colorpicker1').colorpicker();
-			
-				$('#simple-colorpicker-1').ace_colorpicker();
-				//$('#simple-colorpicker-1').ace_colorpicker('pick', 2);//select 2nd color
-				//$('#simple-colorpicker-1').ace_colorpicker('pick', '#fbe983');//select #fbe983 color
-				//var picker = $('#simple-colorpicker-1').data('ace_colorpicker')
-				//picker.pick('red', true);//insert the color if it doesn't exist
-			
-			
-				$(".knob").knob();
-				
-				
-				var tag_input = $('#form-field-tags');
-				try{
-					tag_input.tag(
-					  {
-						placeholder:tag_input.attr('placeholder'),
-						//enable typeahead by specifying the source array
-						source: ace.vars['US_STATES'],//defined in ace.js >> ace.enable_search_ahead
-						/**
-						//or fetch data from database, fetch those that match "query"
-						source: function(query, process) {
-						  $.ajax({url: 'remote_source.php?q='+encodeURIComponent(query)})
-						  .done(function(result_items){
-							process(result_items);
-						  });
-						}
-						*/
-					  }
-					);
-			
-					//programmatically add a new
-					var $tag_obj = $('#form-field-tags').data('tag');
-					$tag_obj.add('Programmatically Added');
-				}
-				catch(e) {
-					//display a textarea for old IE, because it doesn't support this plugin or another one I tried!
-					tag_input.after('<textarea id="'+tag_input.attr('id')+'" name="'+tag_input.attr('name')+'" rows="3">'+tag_input.val()+'</textarea>').remove();
-					//$('#form-field-tags').autosize({append: "\n"});
-				}
-				
-				
-				
-			
-				/////////
-				$('#modal-form input[type=file]').ace_file_input({
-					style:'well',
-					btn_choose:'Drop files here or click to choose',
-					btn_change:null,
-					no_icon:'ace-icon fa fa-cloud-upload',
-					droppable:true,
-					thumbnail:'large'
-				})
-				
-				//chosen plugin inside a modal will have a zero width because the select element is originally hidden
-				//and its width cannot be determined.
-				//so we set the width after modal is show
-				$('#modal-form').on('shown.bs.modal', function () {
-					$(this).find('.chosen-container').each(function(){
-						$(this).find('a:first-child').css('width' , '210px');
-						$(this).find('.chosen-drop').css('width' , '210px');
-						$(this).find('.chosen-search input').css('width' , '200px');
-					});
-				})
-				/**
-				//or you can activate the chosen plugin after modal is shown
-				//this way select element becomes visible with dimensions and chosen works as expected
-				$('#modal-form').on('shown', function () {
-					$(this).find('.modal-chosen').chosen();
-				})
-				*/
-			
-			});
-		</script>
+?>
 
-		<!-- design -->
-		<link rel="stylesheet" href="/static/css/design.css" />
-		<!-- design end -->
-	</body>
-</html>
+
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+<?php $this->beginBlock('welcome_index') ?>
+    jQuery(function($) {
+        $('.easy-pie-chart.percentage').each(function(){
+            var $box = $(this).closest('.infobox');
+            var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
+            var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
+            var size = parseInt($(this).data('size')) || 50;
+            $(this).easyPieChart({
+                barColor: barColor,
+                trackColor: trackColor,
+                scaleColor: false,
+                lineCap: 'butt',
+                lineWidth: parseInt(size/10),
+                animate: /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ? false : 1000,
+                size: size
+            });
+        })
+    
+        $('.sparkline').each(function(){
+            var $box = $(this).closest('.infobox');
+            var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
+            $(this).sparkline('html',
+                             {
+                                tagValuesAttribute:'data-values',
+                                type: 'bar',
+                                barColor: barColor ,
+                                chartRangeMin:$(this).data('min') || 0
+                             });
+        });
+    
+    
+    
+      var placeholder = $('#piechart-placeholder').css({'width':'90%' , 'min-height':'150px'});
+      var data = [
+        { label: "social networks",  data: 38.7, color: "#68BC31"},
+        { label: "search engines",  data: 24.5, color: "#2091CF"},
+        { label: "ad campaigns",  data: 8.2, color: "#AF4E96"},
+        { label: "direct traffic",  data: 18.6, color: "#DA5430"},
+        { label: "other",  data: 10, color: "#FEE074"}
+      ]
+      function drawPieChart(placeholder, data, position) {
+          $.plot(placeholder, data, {
+            series: {
+                pie: {
+                    show: true,
+                    tilt:0.8,
+                    highlight: {
+                        opacity: 0.25
+                    },
+                    stroke: {
+                        color: '#fff',
+                        width: 2
+                    },
+                    startAngle: 2
+                }
+            },
+            legend: {
+                show: true,
+                position: position || "ne", 
+                labelBoxBorderColor: null,
+                margin:[-30,15]
+            }
+            ,
+            grid: {
+                hoverable: true,
+                clickable: true
+            }
+         })
+     }
+     drawPieChart(placeholder, data);
+    
+     /**
+     we saved the drawing function and the data to redraw with different position later when switching to RTL mode dynamically
+     so that's not needed actually.
+     */
+     placeholder.data('chart', data);
+     placeholder.data('draw', drawPieChart);
+    
+    
+      //pie chart tooltip example
+      var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
+      var previousPoint = null;
+    
+      placeholder.on('plothover', function (event, pos, item) {
+        if(item) {
+            if (previousPoint != item.seriesIndex) {
+                previousPoint = item.seriesIndex;
+                var tip = item.series['label'] + " : " + item.series['percent']+'%';
+                $tooltip.show().children(0).text(tip);
+            }
+            $tooltip.css({top:pos.pageY + 10, left:pos.pageX + 10});
+        } else {
+            $tooltip.hide();
+            previousPoint = null;
+        }
+        
+     });
+    
+    
+    
+    
+    
+    
+        var d1 = [];
+        for (var i = 0; i < Math.PI * 2; i += 0.5) {
+            d1.push([i, Math.sin(i)]);
+        }
+    
+        var d2 = [];
+        for (var i = 0; i < Math.PI * 2; i += 0.5) {
+            d2.push([i, Math.cos(i)]);
+        }
+    
+        var d3 = [];
+        for (var i = 0; i < Math.PI * 2; i += 0.2) {
+            d3.push([i, Math.tan(i)]);
+        }
+        
+    
+        var sales_charts = $('#sales-charts').css({'width':'100%' , 'height':'220px'});
+        $.plot("#sales-charts", [
+            { label: "Domains", data: d1 },
+            { label: "Hosting", data: d2 },
+            { label: "Services", data: d3 }
+        ], {
+            hoverable: true,
+            shadowSize: 0,
+            series: {
+                lines: { show: true },
+                points: { show: true }
+            },
+            xaxis: {
+                tickLength: 0
+            },
+            yaxis: {
+                ticks: 10,
+                min: -2,
+                max: 2,
+                tickDecimals: 3
+            },
+            grid: {
+                backgroundColor: { colors: [ "#fff", "#fff" ] },
+                borderWidth: 1,
+                borderColor:'#555'
+            }
+        });
+    
+    
+        $('#recent-box [data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+        function tooltip_placement(context, source) {
+            var $source = $(source);
+            var $parent = $source.closest('.tab-content')
+            var off1 = $parent.offset();
+            var w1 = $parent.width();
+    
+            var off2 = $source.offset();
+            //var w2 = $source.width();
+    
+            if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+            return 'left';
+        }
+    
+    
+        $('.dialogs,.comments').ace_scroll({
+            size: 300
+        });
+        
+        
+        //Android's default browser somehow is confused when tapping on label which will lead to dragging the task
+        //so disable dragging when clicking on label
+        var agent = navigator.userAgent.toLowerCase();
+        if("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
+          $('#tasks').on('touchstart', function(e){
+            var li = $(e.target).closest('#tasks li');
+            if(li.length == 0)return;
+            var label = li.find('label.inline').get(0);
+            if(label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation() ;
+        });
+    
+        $('#tasks').sortable({
+            opacity:0.8,
+            revert:true,
+            forceHelperSize:true,
+            placeholder: 'draggable-placeholder',
+            forcePlaceholderSize:true,
+            tolerance:'pointer',
+            stop: function( event, ui ) {
+                //just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+                $(ui.item).css('z-index', 'auto');
+            }
+            }
+        );
+        $('#tasks').disableSelection();
+        $('#tasks input:checkbox').removeAttr('checked').on('click', function(){
+            if(this.checked) $(this).closest('li').addClass('selected');
+            else $(this).closest('li').removeClass('selected');
+        });
+    
+    
+        //show the dropdowns on top or bottom depending on window height and menu position
+        $('#task-tab .dropdown-hover').on('mouseenter', function(e) {
+            var offset = $(this).offset();
+    
+            var $w = $(window)
+            if (offset.top > $w.scrollTop() + $w.innerHeight() - 100) 
+                $(this).addClass('dropup');
+            else $(this).removeClass('dropup');
+        });
+    
+    })
+<?php $this->endBlock() ?>
+<?php $this->registerJs($this->blocks['welcome_index'], \yii\web\View::POS_END); ?>
+</script>

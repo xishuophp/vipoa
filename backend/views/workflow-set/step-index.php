@@ -18,12 +18,6 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="page-content">
-    <div class="page-header">
-        <h1>
-            <?= Html::encode($this->title) ?>
-        </h1>
-    </div>
-
     <div class="row">
         <div class="col-xs-12">
             <div class="row">
@@ -80,7 +74,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="col-xs-12 col-sm-6">
                     <div class="widget-box">
                         <div class="widget-header">
-                            <h4 class="widget-title"><?=Yii::t('app','Step List')?></h4>
+                            <h4 class="widget-title"><?=Yii::t('app','Flow Timeline')?></h4>
                         </div>
 
                         <div class="widget-body">

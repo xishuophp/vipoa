@@ -14,11 +14,6 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="page-content">
-	<div class="page-header">
-		<h1>
-			<?= Html::encode($this->title) ?>
-		</h1>
-	</div>
 	<div class="row widget-con">
 		<div class="col-xs-12">
 			<?= $this->render('_step_form', [

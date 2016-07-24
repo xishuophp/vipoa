@@ -20,17 +20,32 @@ use yii\widgets\ActiveForm;
                 'labelOptions' => ['class'=>'col-sm-2 control-label no-padding-right'],
             ],
     ]); ?>
-        <?= $form->field($model, 'prcs_id')->dropDownList(['1'=>Yii::t('app','Step_1'),'2'=>Yii::t('app','Step_2'),'3'=>Yii::t('app','Step_3'),'4'=>Yii::t('app','Step_4'),'5'=>Yii::t('app','Step_5'),'6'=>Yii::t('app','Step_6'),'7'=>Yii::t('app','Step_7'),'8'=>Yii::t('app','Step_8'),'9'=>Yii::t('app','Step_9'),'10'=>Yii::t('app','Step_10'),'11'=>Yii::t('app','Step_11'),'12'=>Yii::t('app','Step_12')],['class'=>'col-xs-12']) ?>
+        <?= $form->field($model, 'prcs_id')->dropDownList(['1'=>Yii::t('app','Step_1'),'2'=>Yii::t('app','Step_2'),'3'=>Yii::t('app','Step_3'),'4'=>Yii::t('app','Step_4'),'5'=>Yii::t('app','Step_5'),'6'=>Yii::t('app','Step_6'),'7'=>Yii::t('app','Step_7'),'8'=>Yii::t('app','Step_8'),'9'=>Yii::t('app','Step_9'),'10'=>Yii::t('app','Step_10'),'11'=>Yii::t('app','Step_11'),'12'=>Yii::t('app','Step_12'),'13'=>Yii::t('app','Step_13'),'14'=>Yii::t('app','Step_14'),'15'=>Yii::t('app','Step_15')],['class'=>'col-xs-12','prompt'=>Yii::t('app', 'Please Select')]) ?>
         <?= $form->field($model, 'prcs_name')->textInput(['class'=>'col-xs-12'])?>
-        <?= $form->field($model, 'prcs_flag')->dropDownList(['0'=>Yii::t('app','Direct Leader'),'2'=>Yii::t('app','Special Department'),'1'=>Yii::t('app','Special Person'),'3'=>Yii::t('app','Joint Signature'),'4'=>Yii::t('app','Department Leader') ,'5'=>Yii::t('app','General Department')],['class'=>'col-xs-12']) ?>
+        <?= $form->field($model, 'prcs_flag')->dropDownList(['1'=>Yii::t('app','Direct Leader'),'2'=>Yii::t('app','Special Person'),'3'=>Yii::t('app','Joint Signature'),'4'=>Yii::t('app','Department Leader') ,'5'=>Yii::t('app','Manager Leader')],['class'=>'col-xs-12','prompt'=>Yii::t('app', 'Please Select')]) ?>
+        <div class="form-group">
+            <label class="col-sm-2 control-label no-padding-right"><?=Yii::t('app','Auto Approval')?></label>
+
+            <div class="radio inline">
+                <label>
+                    <input name="FlowProcess[auto_approval]" value="1" type="radio" class="ace" <?php if($model->isNewRecord){ echo 'checked';}else{if($model->auto_approval == 1) echo 'checked';}?> />
+                    <span class="lbl"> <?=Yii::t('app','Yes')?></span>
+                </label>
+            </div>
+            <div class="radio inline">
+                <label>
+                    <input name="FlowProcess[auto_approval]" value="0" type="radio" class="ace" <?php if(!$model->isNewRecord && $model->auto_approval == 0) echo 'checked'; ?> />
+                    <span class="lbl"> <?=Yii::t('app','No')?></span>
+                </label>
+            </div>
+
+        </div>
         <?= $form->field($model, 'prcs_item')->textArea(['class'=>'col-xs-12'])?>
         <?= $form->field($model, 'prcs_dept_user')->textArea(['class'=>'col-xs-12'])?>
-        <?php // $form->field($model, 'prcs_to')->dropDownList(['1'=>Yii::t('app','Step_1'),'2'=>Yii::t('app','Step_2'),'3'=>Yii::t('app','Step_3'),'4'=>Yii::t('app','Step_4'),'5'=>Yii::t('app','Step_5'),'6'=>Yii::t('app','Step_6'),'7'=>Yii::t('app','Step_7'),'8'=>Yii::t('app','Step_8'),'0'=>Yii::t('app','Step End')],['class'=>'col-xs-12']) ?>
         <div class="form-group">
             <label class="col-sm-2 control-label no-padding-right"><?=Yii::t('app','Prcs To')?></label>
             <?php
                 $stepArr = [
-                    '1' => Yii::t('app','Step_1'),
                     '2' => Yii::t('app','Step_2'),
                     '3' => Yii::t('app','Step_3'),
                     '4' => Yii::t('app','Step_4'),
@@ -42,9 +57,12 @@ use yii\widgets\ActiveForm;
                     '10' => Yii::t('app','Step_10'),
                     '11' => Yii::t('app','Step_11'),
                     '12' => Yii::t('app','Step_12'),
+                    '13' => Yii::t('app','Step_13'),
+                    '14' => Yii::t('app','Step_14'),
+                    '15' => Yii::t('app','Step_15'),
                     '0' => Yii::t('app','Step End'),
                 ];
-                $existSteps = explode(',', $model['prcs_to']);
+                $existSteps = $model['prcs_to'] ? explode(',', $model['prcs_to']) : [];
                 if($stepArr && is_array($stepArr)):
                     foreach ($stepArr as $stepid=>$stepname):
             ?>
@@ -61,6 +79,8 @@ use yii\widgets\ActiveForm;
         </div>
         <?= $form->field($model, 'prcs_in')->textArea(['class'=>'col-xs-12'])?>
         <?= $form->field($model, 'prcs_in_set')->textArea(['class'=>'col-xs-12'])?>
+        <?= $form->field($model, 'prcs_out')->textArea(['class'=>'col-xs-12'])?>
+        <?= $form->field($model, 'prcs_out_set')->textArea(['class'=>'col-xs-12'])?>
         <?= $form->field($model, 'sign_look')->dropDownList(['0'=>Yii::t('app','Always Visible'),'1'=>Yii::t('app','Signer Not Visible'),'2'=>Yii::t('app','Other Step Not Visible')])?>
         <?= $form->field($model, 'mail_to')->textArea(['class'=>'col-xs-12'])?>
 

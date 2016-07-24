@@ -10,7 +10,7 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
-    'defaultRoute' => 'welcome/home',
+    'defaultRoute' => 'welcome/index',
     'language' => 'zh-CN',
     'bootstrap' => ['log'],
     'modules' => [],
@@ -44,7 +44,7 @@ return [
         ],
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=127.0.0.1;dbname=vipxyz',
+            'dsn' => 'mysql:host=127.0.0.1;dbname=vipoa',
             'username' => 'root',
             'password' => '123456',
             'charset' => 'utf8',

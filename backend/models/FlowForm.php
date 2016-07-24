@@ -9,14 +9,12 @@ use Yii;
  *
  * @property integer $form_id
  * @property string $form_name
- * @property string $submit_template
- * @property string $print_template
- * @property integer $dept_id
- * @property string $script
- * @property string $css
+ * @property string $print_model
+ * @property string $print_model_short
  * @property integer $item_max
- * @property integer $sort_no
- * @property integer $category_id
+ * @property string $css
+ * @property string $script
+ * @property string $print_template
  */
 class FlowForm extends \common\base\BaseActiveRecord
 {
@@ -34,9 +32,11 @@ class FlowForm extends \common\base\BaseActiveRecord
     public function rules()
     {
         return [
-            [['submit_template', 'print_template', 'script', 'css'], 'string'],
-            [['dept_id', 'item_max', 'sort_no', 'category_id'], 'integer'],
-            [['form_name'], 'string', 'max' => 200]
+            [['form_name', 'print_model', 'print_model_short'], 'required'],
+            [['print_model', 'print_model_short', 'css', 'script'], 'string'],
+            [['item_max'], 'integer'],
+            [['form_name', 'print_template'], 'string', 'max' => 200],
+            [['form_name'], 'unique'],
         ];
     }
 
@@ -48,14 +48,12 @@ class FlowForm extends \common\base\BaseActiveRecord
         return [
             'form_id' => Yii::t('app', 'Form ID'),
             'form_name' => Yii::t('app', 'Form Name'),
-            'submit_template' => Yii::t('app', 'Submit Template'),
-            'print_template' => Yii::t('app', 'Print Template'),
-            'dept_id' => Yii::t('app', 'Dept ID'),
-            'script' => Yii::t('app', 'Script'),
-            'css' => Yii::t('app', 'Css'),
+            'print_model' => Yii::t('app', 'Print Model'),
+            'print_model_short' => Yii::t('app', 'Print Model Short'),
             'item_max' => Yii::t('app', 'Item Max'),
-            'sort_no' => Yii::t('app', 'Sort No'),
-            'category_id' => Yii::t('app', 'Category ID'),
+            'css' => Yii::t('app', 'Css'),
+            'script' => Yii::t('app', 'Script'),
+            'print_template' => Yii::t('app', 'Print Template'),
         ];
     }
 }

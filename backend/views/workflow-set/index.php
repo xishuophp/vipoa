@@ -38,8 +38,14 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <?=Yii::t('app', 'Search') ?>
                                     <i class="ace-icon fa fa-search icon-on-right bigger-110"></i>
                                 </button>
-                            <?php ActiveForm::end(); ?>                               
+                                <span class="pull-right">
+                                <a href="<?=Url::to(['workflow-set/create'])?>"><button class="btn btn-sm btn-success"><?=Yii::t('app', 'Create')?></button></a>
+                                <button class="btn btn-sm btn-danger"><?=Yii::t('app', 'Delete')?></button>
+                                </span>
+                            <?php ActiveForm::end(); ?>
+                                                        
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -47,22 +53,6 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
             <div class="col-xs-12">
                 <div>
-                    <div class="modal-footer no-margin-top">
-                        <div class="col-xs-6">
-                            <div class="dataTables_info pull-left">
-                                <a href="<?=Url::to(['workflow-set/create'])?>"><button class="btn btn-sm btn-success"><?=Yii::t('app', 'Create')?></button></a>
-                                <button class="btn btn-sm btn-danger"><?=Yii::t('app', 'Delete')?></button>
-                            </div>
-                        </div>
-                        <?= LinkPager::widget([
-                                    'pagination' => $pages,
-                                    'maxButtonCount'=>8,
-                                    'options' => [
-                                        'class' => 'pagination pull-right no-margin',
-                                    ],
-                                ]);
-                            ?>
-                    </div>
                     <table id="sample-table-2" class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
@@ -86,7 +76,11 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <td><?= $row['flow_name'] ?></td>
                                 <td>
                                     <?php
-
+                                        $category = \backend\models\FlowCategory::findOne($row['category_id']);
+                                        if($category)
+                                            echo $category['category_name'];
+                                        else
+                                            echo Yii::t('app','Unknown');
                                     ?>
                                 </td>
                                 <td>

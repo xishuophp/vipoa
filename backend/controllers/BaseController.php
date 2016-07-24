@@ -13,12 +13,12 @@ class BaseController extends Controller
 
     public function init()
     {
-        parent::init();
-        //判断登陆
-        if (\Yii::$app->user->isGuest){
-            header("Location:/index.php?r=site/login");
-            exit;
-        }
+        // parent::init();
+        // //判断登陆
+        // if (\Yii::$app->user->isGuest){
+        //     header("Location:/index.php?r=site/login");
+        //     exit;
+        // }
     }
 
 
