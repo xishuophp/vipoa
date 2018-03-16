@@ -37,5 +37,10 @@ class BaseController extends Controller
         ]);
     }
 
+    public function _showPage($page, $locals)
+    {
+        return $this->render($page, $locals);
+    }
+
 
 }

@@ -63,17 +63,14 @@ class User extends \common\base\BaseActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['dept_id', 'sex', 'ichat', 'online', 'status', 'on_status', 'attend_status', 'mobile_hidden', 'user_sort', 'not_login', 'created_at', 'updated_at', 'reset_password'], 'integer'],
+            [['dept_id', 'sex', 'ichat', 'online', 'status', 'on_status', 'attend_status', 'mobile_hidden', 'user_sort', 'not_login', 'created_at', 'updated_at'], 'integer'],
             [['birthday', 'last_visit_time', 'last_pass_time'], 'safe'],
             [['remark'], 'string'],
             [['username', 'tel_dept', 'fax_dept', 'post_home', 'tel_home', 'mobile', 'qq'], 'string', 'max' => 50],
-            [['auth_key'], 'string', 'max' => 32],
+            [['auth_key'], 'string', 'max' => 64],
             [['password', 'password_reset_token'], 'string', 'max' => 255],
-            [['nick_name', 'english_name', 'email'], 'string', 'max' => 100],
+            [['name_cn', 'name_en', 'email'], 'string', 'max' => 100],
             [['add_home', 'avatar', 'my_status'], 'string', 'max' => 200],
-            [['username','password','nick_name',],'required'],
-            ['sex','default','value'=>1,],
-            ['mobile_hidden','default','value'=>1],
         ];
     }
 
@@ -88,8 +85,8 @@ class User extends \common\base\BaseActiveRecord implements IdentityInterface
             'auth_key' => Yii::t('app', 'Auth Key'),
             'password' => Yii::t('app', 'Password'),
             'password_reset_token' => Yii::t('app', 'Password Reset Token'),
-            'nick_name' => Yii::t('app', 'Nick Name'),
-            'english_name' => Yii::t('app', 'English Name'),
+            'name_cn' => Yii::t('app', 'Name Cn'),
+            'name_en' => Yii::t('app', 'Name En'),
             'dept_id' => Yii::t('app', 'Dept ID'),
             'sex' => Yii::t('app', 'Sex'),
             'birthday' => Yii::t('app', 'Birthday'),
@@ -116,7 +113,6 @@ class User extends \common\base\BaseActiveRecord implements IdentityInterface
             'my_status' => Yii::t('app', 'My Status'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
-            'reset_password' => Yii::t('app', 'Reset Password'),
         ];
     }
 
